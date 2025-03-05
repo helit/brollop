@@ -5,7 +5,7 @@ export const ApplicationForm = () => {
   return (
     <StyledCard>
       <FormWrapper>
-        <Typography variant="h3">{"Anmälan"}</Typography>
+        <Typography variant="h3" fontFamily={'Charm'}>{"Anmälan"}</Typography>
         <Typography variant="body2">
           {"Fyll i formuläret nedan för att anmäla dig till bröllopet."}
         </Typography>

@@ -1,9 +1,9 @@
-import { FrontPageHeading } from "../components/Header/FrontPageHeading/FrontPageHeading";
+import { Welcome } from "../components/Welcome/Welcome";
 
 export const Start = () => {
   return (
     <>
-      <FrontPageHeading />
+      <Welcome />
     </>
   );
 };
