@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -6,7 +6,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #F6EEE3;
+  color: #f6eee3;
   background-color: #242424;
 
   font-synthesis: none;
@@ -19,12 +19,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 72px 0 0;
+  padding: 80px 0 0;
   box-sizing: border-box;
   min-width: 320px;
   margin: 0;
-  min-height: 100vh;
-  background: url("./src/assets/background.jpg");
+  min-height: calc(100vh - 80px);
+  background: url('./src/assets/background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
