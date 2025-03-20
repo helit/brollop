@@ -3,7 +3,7 @@ import { Welcome } from '../components/Welcome/Welcome'
 import { Section } from '../components/Section/Section'
 import styled from '@emotion/styled'
 import { colors, Typography } from '@mui/material'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useTabs } from '../hooks/useTabs'
 
 const StartWrapper = styled.div`
