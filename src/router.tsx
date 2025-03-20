@@ -2,6 +2,7 @@ import { RouteObject } from 'react-router-dom'
 import { Start } from './pages/Start'
 import { Application } from './pages/Application'
 import App from './App'
+import { NotFound } from './pages/NotFound'
 
 export const routes: RouteObject[] = [
   {
@@ -20,7 +21,7 @@ export const routes: RouteObject[] = [
   },
   {
     path: '*',
-    element: <div>404</div>,
+    element: <NotFound />,
   },
 ]
 
