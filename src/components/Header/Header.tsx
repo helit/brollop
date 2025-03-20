@@ -5,7 +5,7 @@ import { tabs } from '../../consts/tabs'
 export const Header = () => {
   const { activeTab, setActiveTab } = useTabs()
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (newValue: number) => {
     setActiveTab(newValue)
   }
 
@@ -16,7 +16,7 @@ export const Header = () => {
           {'Henke & Lottens bröllop'}
         </Typography>
         <Box>
-          <Tabs value={activeTab} onChange={handleChange}>
+          <Tabs value={activeTab} onChange={() => handleChange}>
             {tabs.map((tab) => (
               <Tab key={tab.label} label={tab.label} />
             ))}
