@@ -1,9 +1,12 @@
-import { Outlet } from 'react-router-dom'
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
 import { Header } from './components/Header/Header'
 import { TabsProvider } from './contexts/TabsContext'
 import { createTheme, ThemeProvider } from '@mui/material'
 import { amber, deepOrange } from '@mui/material/colors'
+import { Start } from './pages/Start'
+import { Application } from './pages/Application'
+import { NotFound } from './pages/NotFound'
 
 const theme = createTheme({
   palette: {
@@ -18,7 +21,11 @@ export const App = () => {
       <ThemeProvider theme={theme}>
         <TabsProvider>
           <Header />
-          <Outlet />
+          <Router basename="/brollop/">
+            <Route path="/" element={<Start />} />
+            <Route path="/anmalan" element={<Application />} />
+            <Route element={<NotFound />} />
+          </Router>
         </TabsProvider>
       </ThemeProvider>
     </>
