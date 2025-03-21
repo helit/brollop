@@ -6,7 +6,7 @@ import { colors, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { useTabs } from '../hooks/useTabs'
 
-import kyrka from './assets/lycke-ka-akvarell.png'
+import church from '../assets/lycke-ka-akvarell.png'
 
 const StartWrapper = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ export const Start = () => {
       <Welcome />
       <PageLayout>
         <Section title="Vigseln">
-          <img src={`url(${kyrka})`} style={{ width: '100%' }} />
+          <img src={church} style={{ width: '100%' }} />
           <Typography variant={'body1'}>
             Vigseln kommer äga rum den 19 juli i Lycke Kyrka kl xx:xx...{' '}
             <Link

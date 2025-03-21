@@ -7,5 +7,5 @@ export default defineConfig({
   plugins: [react(), ghPages()],
   define: {
     'process.env': process.env,
-  },
+  }
 })
