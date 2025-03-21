@@ -6,7 +6,7 @@ import { colors, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { useTabs } from '../hooks/useTabs'
 
-import kyrka from '../assets/lycke-ka-akvarell.png'
+import kyrka from './assets/lycke-ka-akvarell.png'
 
 const StartWrapper = styled.div`
   display: flex;
