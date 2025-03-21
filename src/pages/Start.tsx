@@ -21,7 +21,7 @@ export const Start = () => {
       <PageLayout>
         <Section title="Vigseln">
           <img
-            src={'./src/assets/lycke-ka-akvarell.png'}
+            src={'/assets/lycke-ka-akvarell.png'}
             style={{ width: '100%' }}
           />
           <Typography variant={'body1'}>
