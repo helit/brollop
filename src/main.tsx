@@ -4,7 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { routes } from './router.tsx'
 import ReactDOM from 'react-dom/client'
 
-const router = createBrowserRouter(routes)
+const router = createBrowserRouter(routes, {
+  basename: '/brollop/',
+})
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
