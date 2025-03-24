@@ -1,31 +1,36 @@
-import styled from '@emotion/styled'
-import { Card, Typography } from '@mui/material'
-import { ReactNode } from 'react'
+import styled from '@emotion/styled';
+import { Typography } from '@mui/material';
+import { ReactNode } from 'react';
 
-const SectionWrapper = styled(Card)`
+const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background-color: rgba(246, 238, 227, 0.9);
-  color: #242424;
-  padding: 20px;
-`
+`;
+
+const SectionDivider = styled.div`
+  border-bottom: 3px dotted #000;
+  margin: 16px 0;
+`;
 
 interface SectionProps {
-  children: ReactNode
-  title?: string
-  sectionId?: string
+  children: ReactNode;
+  title?: string;
+  sectionId?: string;
 }
 
 export const Section = ({ children, title, sectionId }: SectionProps) => {
   return (
-    <section id={sectionId}>
-      <SectionWrapper>
-        <Typography variant="h3" fontFamily={'Charm'}>
-          {title}
-        </Typography>
+    <>
+      <SectionWrapper id={sectionId}>
+        {title && (
+          <Typography variant="h4" fontFamily={'Charm'}>
+            {title}
+          </Typography>
+        )}
         {children}
       </SectionWrapper>
-    </section>
-  )
-}
+      <SectionDivider />
+    </>
+  );
+};

@@ -1,10 +1,10 @@
-import { ReactNode } from 'react'
-import { PageLayoutWrapper } from './PageLayout.styled'
+import { ReactNode } from 'react';
+import { PageLayoutWrapper } from './PageLayout.styled';
 
 interface PageLayoutProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export const PageLayout = ({ children }: PageLayoutProps) => {
-  return <PageLayoutWrapper>{children}</PageLayoutWrapper>
-}
+  return <PageLayoutWrapper>{children}</PageLayoutWrapper>;
+};

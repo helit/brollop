@@ -35,7 +35,9 @@ export const WelcomeTitle = styled(Typography)`
 `;
 
 export const WelcomeBody = styled(Typography)`
-    text-shadow: ${colors.black} 1px 0px 10px;
+    // text-shadow: ${colors.black} 1px 0px 10px;
+    text-shadow: ${colors.black} 2px 2px 1px;
+    
 
     @media (max-width: ${breakpoints.tablet}px) {
         font-size: 1.2rem;

@@ -1,15 +1,14 @@
-import { ApplicationForm } from '../components/ApplicationForm/ApplicationForm'
-import { PageLayout } from '../components/PageLayout/PageLayout'
-import { Section } from '../components/Section/Section'
-
+import { ApplicationForm } from '../components/ApplicationForm/ApplicationForm';
+import { PageLayout } from '../components/PageLayout/PageLayout';
+import { PagePaper } from '../components/PageLayout/PageLayout.styled';
 export const Application = () => {
   return (
     <div>
       <PageLayout>
-        <Section title="Anmälan">
+        <PagePaper title="Anmälan">
           <ApplicationForm />
-        </Section>
+        </PagePaper>
       </PageLayout>
     </div>
-  )
-}
+  );
+};

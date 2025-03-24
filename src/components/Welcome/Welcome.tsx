@@ -1,29 +1,35 @@
-import { IconButton } from '@mui/material'
+import { IconButton } from '@mui/material';
 import {
   WelcomeBody,
   WelcomeDivider,
   WelcomeInnerWrapper,
   WelcomeOuterWrapper,
   WelcomeTitle,
-} from './Welcome.styled'
-import SouthIcon from '@mui/icons-material/South'
+} from './Welcome.styled';
+import SouthIcon from '@mui/icons-material/South';
 
 export const Welcome = () => {
   return (
     <WelcomeOuterWrapper>
       <WelcomeInnerWrapper>
         <div>
-          <WelcomeTitle fontFamily={'Charm'} variant="h1">
+          <WelcomeTitle fontFamily={'Charm'} variant="h2">
             {'Henke & Lottens bröllop'}
           </WelcomeTitle>
           <WelcomeDivider />
         </div>
-        <div>
-          <WelcomeBody variant="h5">
-            Välkommen till vårat bröllop den 19 juli i Lycke Kyrka. På denna
-            hemsida hittar ni all information samt möjlighet att anmäla er till
-            bröllopet. Scrolla ner för mer information eller gå direkt till
-            anmälan i menyn högst upp på sidan.
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          <WelcomeBody variant="h6">Vi ska gifta oss i sommar!</WelcomeBody>
+          <WelcomeBody variant="h6">
+            Istället för en brevinbjudan har vi byggt en hemsida där du som
+            inbjuden kan hitta mer information.
+          </WelcomeBody>
+          <WelcomeBody variant="h6">
+            Vi hoppas att du vill fira dagen med oss!
+          </WelcomeBody>
+          <WelcomeBody variant="h6">
+            OSA gärna så snart som möjligt, men senast 18 maj genom att fylla i
+            anmälan.
           </WelcomeBody>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -33,5 +39,5 @@ export const Welcome = () => {
         </div>
       </WelcomeInnerWrapper>
     </WelcomeOuterWrapper>
-  )
-}
+  );
+};
