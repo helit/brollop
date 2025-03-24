@@ -5,10 +5,6 @@ import { tabs } from '../../consts/tabs'
 export const Header = () => {
   const { activeTab, setActiveTab } = useTabs()
 
-  const handleChange = (newValue: number) => {
-    setActiveTab(newValue)
-  }
-
   return (
     <StyledAppBar>
       <ContentWrapper>
@@ -16,9 +12,13 @@ export const Header = () => {
           {'Henke & Lottens bröllop'}
         </Typography>
         <Box>
-          <Tabs value={activeTab} onChange={() => handleChange}>
+          <Tabs value={activeTab}>
             {tabs.map((tab) => (
-              <Tab key={tab.label} label={tab.label} />
+              <Tab
+                key={tab.label}
+                label={tab.label}
+                onClick={() => setActiveTab(tab.index)}
+              />
             ))}
           </Tabs>
         </Box>

@@ -1,6 +1,11 @@
-import { IconButton, Typography } from '@mui/material'
-import { colors } from '../../consts/colors'
-import { WelcomeInnerWrapper, WelcomeOuterWrapper } from './Welcome.styled'
+import { IconButton } from '@mui/material'
+import {
+  WelcomeBody,
+  WelcomeDivider,
+  WelcomeInnerWrapper,
+  WelcomeOuterWrapper,
+  WelcomeTitle,
+} from './Welcome.styled'
 import SouthIcon from '@mui/icons-material/South'
 
 export const Welcome = () => {
@@ -8,33 +13,18 @@ export const Welcome = () => {
     <WelcomeOuterWrapper>
       <WelcomeInnerWrapper>
         <div>
-          <Typography
-            style={{ textShadow: `${colors.black} 1px 0px 10px` }}
-            fontFamily={'Charm'}
-            variant="h1"
-          >
+          <WelcomeTitle fontFamily={'Charm'} variant="h1">
             {'Henke & Lottens bröllop'}
-          </Typography>
-          <div
-            style={{
-              backgroundColor: 'white',
-              width: '100%',
-              height: '3px',
-              boxShadow: `${colors.black} 1px 0px 10px`,
-              borderRadius: '30%',
-            }}
-          />
+          </WelcomeTitle>
+          <WelcomeDivider />
         </div>
         <div>
-          <Typography
-            variant="h5"
-            style={{ textShadow: `${colors.black} 1px 0px 10px` }}
-          >
+          <WelcomeBody variant="h5">
             Välkommen till vårat bröllop den 19 juli i Lycke Kyrka. På denna
             hemsida hittar ni all information samt möjlighet att anmäla er till
             bröllopet. Scrolla ner för mer information eller gå direkt till
             anmälan i menyn högst upp på sidan.
-          </Typography>
+          </WelcomeBody>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <IconButton color="primary" size="large">
