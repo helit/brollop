@@ -1,8 +1,9 @@
-import { RouteObject } from 'react-router-dom'
-import { Start } from './pages/Start'
-import { Application } from './pages/Application'
-import App from './App'
-import { NotFound } from './pages/NotFound'
+import { RouteObject } from 'react-router-dom';
+import { Start } from './pages/Start';
+import { Application } from './pages/Application';
+import App from './App';
+import { NotFound } from './pages/NotFound';
+import { ThankYou } from './pages/ThankYou';
 
 export const routes: RouteObject[] = [
   {
@@ -17,12 +18,16 @@ export const routes: RouteObject[] = [
         path: '/anmalan',
         element: <Application />,
       },
+      {
+        path: '/thank-you',
+        element: <ThankYou />,
+      },
     ],
   },
   {
     path: '*',
     element: <NotFound />,
   },
-]
+];
 
-export default routes
+export default routes;
