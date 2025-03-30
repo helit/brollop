@@ -29,6 +29,9 @@ export const useDb = () => {
       child_guests: data.childGuests,
       food_preferences: data.foodPreferences || null,
       message: data.message || null,
+      travel_option: data.travelOption || null,
+      number_of_cars: data.numberOfCars || null,
+      number_of_beds: data.numberOfBeds || null,
     })
 
     if (error) {

@@ -4,6 +4,9 @@ export type PostType = {
   email: string
   adultGuests: number
   childGuests: number
-  foodPreferences?: string
-  message?: string
+  foodPreferences: string | null
+  travelOption: string,
+  numberOfCars: number | null,
+  numberOfBeds: number | null 
+  message: string | null
 }
