@@ -36,10 +36,41 @@ export const Start = () => {
           <Section title="Vigseln" sectionId="wedding">
             <SubSection>
               <Typography variant={'body1'}>
-                {`Vigseln kommer att äga rum kl 12:00 den 19 juli i Lycke Kyrka.`}
+                Vigseln kommer att äga rum kl 12:00 den 19 juli i Lycke Kyrka.
+                Den är öppen och kräver ingen anmälan.
               </Typography>
               <Typography variant={'body1'}>
-                {`Vigseln är öppen och kräver ingen anmälan.`}
+                {`Adress till kyrkan: `}
+                <Link
+                  to={'https://maps.app.goo.gl/WHjSzpv5B3UVLRam8'}
+                  style={{ color: muiColors.deepOrange[300] }}
+                >
+                  Stora Lycke 350, 442 75 Lycke
+                </Link>
+                {`.`}
+              </Typography>
+              <Typography variant={'body1'}>
+                Om du reser med bil, parkera bilen på kyrkans parkering.
+              </Typography>
+            </SubSection>
+            <SubSection>
+              <Typography variant={'body1'}>
+                {`Om du reser kollektivt, sök på `}
+                <Link
+                  to={'https://www.vasttrafik.se'}
+                  style={{ color: muiColors.deepOrange[300] }}
+                >
+                  västtrafiks hemsida
+                </Link>
+                {` efter
+                hållplatsen: Lycke, Kungälv`}
+              </Typography>
+            </SubSection>
+            <SubSection>
+              <Typography variant={'body1'}>
+                Fyll också i ditt färdsätt i anmälan med en eventuell kommentar
+                i meddelandet, så ser vi om det kanske går att ordna samåkning
+                med någon annan gäst!
               </Typography>
             </SubSection>
             <img src={church} style={{ width: '100%' }} />
@@ -52,123 +83,37 @@ export const Start = () => {
                 <Link
                   to={'/anmalan'}
                   onClick={() => setActiveTab(1)}
-                  style={{ color: muiColors.deepOrange[500] }}
+                  style={{ color: muiColors.deepOrange[300] }}
                 >
                   här
                 </Link>
                 .
               </Typography>
-              <Typography variant={'body1'}>
-                Festen kommer äga rum hemma i vår trädgård i Tofta.
-              </Typography>
             </SubSection>
-          </Section>
-          <Section title="Klädsel">
             <SubSection>
               <Typography variant={'body1'}>
-                Ta på dig något fint. Vi vill gärna att du har kläder eller
-                någon detalj i de färger vi har valt för dagen.
+                Festen kommer äga rum hemma i vår trädgård i Tofta. Vi tar oss
+                gemensamt dit efter vigseln. Vi önskar ett barnvänligt bröllop
+                där alla får vara med och ha roligt tillsammans. Vi ber er ha
+                detta i åtanke under festen.
               </Typography>
             </SubSection>
             <SubSection>
               <Typography variant={'body1'}>
-                Färgerna vi valt är följande:
-              </Typography>
-              <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <ColorCircle circleColor={muiColors.deepOrange[500]} />
-                <ColorCircle circleColor={muiColors.blue[500]} />
-                <ColorCircle circleColor={muiColors.amber[600]} />
-              </div>
-            </SubSection>
-          </Section>
-          <Section title="Program">
-            <SubSection>
-              <Typography variant={'h6'}>Dagen i stora drag</Typography>
-              <Typography variant={'body1'}>Vigsel kl 12</Typography>
-              <Typography variant={'body1'}>
-                Vi tar oss gemensamt till festen och håller på så länge vi
-                orkar!
-              </Typography>
-              <Typography variant={'body1'}>
-                Vi bjuder på mat och dryck under middagen, senare under kvällen
-                blir det bar med bra priser.
-              </Typography>
-            </SubSection>
-            <SubSection>
-              <Typography variant={'body1'}>En rolig fest!</Typography>
-              <Typography variant={'body1'}>
-                Vi vill gärna ha en dag med massa skoj!
-              </Typography>
-              <Typography variant={'body1'}>
-                Vill du bidra på festen med tal, spex eller liknande, kontakta
-                toastmaster (se nedan).
-              </Typography>
-            </SubSection>
-            <SubSection>
-              <Typography variant={'body1'}>Något litet om alkohol:</Typography>
-              <Typography variant={'body1'}>
-                Vi önskar ett barnvänligt bröllop där alla får vara med och ha
-                roligt tillsammans. Vi ber er ha detta i åtanke under festen.
+                Vi vill gärna ha en dag med massa skoj där ni gäster är med och
+                bidrar till en oförglömlig dag! Det är välkommet att bidra med
+                tal, spex, lekar eller annat - kontakta då toastmaster.
+                Kontaktuppgifter finns längst ner på sidan.
               </Typography>
             </SubSection>
             <SubSection>
               <Typography variant={'body1'}>
-                Vill du hjälpa oss före, under och efter festen?
-              </Typography>
-              <Typography variant={'body1'}>
-                Hör av dig till regissören Matilda! (se nedan)
-              </Typography>
-            </SubSection>
-            <SubSection>
-              <Typography variant={'body1'}>Bröllopsgåvor å sånt</Typography>
-              <Typography variant={'body1'}>
-                Vi önskar oss inga presenter!
-              </Typography>
-              <Typography variant={'body1'}>
-                Utöver en härlig dag med er önskar vi oss istället ett bidrag
-                till vårt husbygge och till bröllopet.
+                Extra glada blir vi för dom som kan tänka sig att hjälpa till
+                med praktiska göromål innan, under eller efter festen. Om du
+                vill göra det, kontakta våra regissörer. Kontaktuppgifter finns
+                längst ner på sidan.
               </Typography>
             </SubSection>
-          </Section>
-          <Section title={'Hitta till Vigseln'}>
-            <SubSection>
-              <Typography variant={'body1'}>
-                Lycke Kyrka på adressen Stora Lycke 350, 442 75 Lycke.
-              </Typography>
-              <Typography variant={'body1'}>
-                <Link
-                  to={'https://maps.app.goo.gl/WHjSzpv5B3UVLRam8'}
-                  style={{ color: muiColors.deepOrange[500] }}
-                >
-                  Hitta på karta
-                </Link>
-              </Typography>
-              <Typography variant={'body1'}>
-                Om du reser med bil, parkera bilen på kyrkans parkering.
-              </Typography>
-            </SubSection>
-            <SubSection>
-              <Typography variant={'body1'}>Kollektivtrafik:</Typography>
-              <Typography variant={'body1'}>
-                Hållplats: Lycke, Kungälv
-              </Typography>
-              <Typography variant={'body1'}>
-                <Link
-                  to={'https://www.vasttrafik.se'}
-                  style={{ color: muiColors.deepOrange[500] }}
-                >
-                  Västtrafik
-                </Link>
-              </Typography>
-            </SubSection>
-            <SubSection>
-              <Typography variant={'body1'}>
-                Fyll också i ditt färdsätt i anmälan, så ser vi om det går att
-                ordna samåkning med någon annan gäst!
-              </Typography>
-            </SubSection>
-          </Section>
-          <Section title={'Festen'}>
             <SubSection>
               <Typography variant={'body1'}>
                 Adress Tofta 166, 442 75 Lycke, 4 km med bil från Lycke kyrka.
@@ -176,7 +121,7 @@ export const Start = () => {
               <Typography variant={'body1'}>
                 <Link
                   to={'https://maps.app.goo.gl/1ZjCypMsm5mfH37V8'}
-                  style={{ color: muiColors.deepOrange[500] }}
+                  style={{ color: muiColors.deepOrange[300] }}
                 >
                   Hitta på karta
                 </Link>
@@ -189,7 +134,15 @@ export const Start = () => {
                 begränsade i nära anslutning till huset, ber vi er med raska ben
                 att parkera vid Stall Tofta vid Tofta herrgård och promenera 20
                 minuter (1,5km) hem till oss. Vid behov kan vi lösa hämtning vid
-                stallet/skjuts hem till oss (Hör av er om detta innan)
+                stallet/skjuts hem till oss.
+              </Typography>
+              <Typography variant={'body1'}>
+                <Link
+                  to={'https://maps.app.goo.gl/9m6JqhKULJywQHX79'}
+                  style={{ color: muiColors.deepOrange[300] }}
+                >
+                  Karta till huvudparkeringen
+                </Link>
               </Typography>
             </SubSection>
             <SubSection>
@@ -203,26 +156,97 @@ export const Start = () => {
               </Typography>
             </SubSection>
           </Section>
+          <Section title="Lovis namngivning">
+            <SubSection>
+              <Typography variant={'body1'}>
+                Då devisen mer fest är bättre fest gäller så slänger vi in en
+                fest i festen på bröllopsdagen också!
+              </Typography>
+              <Typography variant={'body1'}>
+                Vi kommer att köra namngivning för Lovis under festen, så var
+                beredda på detta! Lovis önskar sig leksaker eller fina
+                personliga saker att minnas sin namngivning med. Presenter kan
+                mer än gärna vara bättre begagnat eller handgjort!
+              </Typography>
+            </SubSection>
+          </Section>
+          <Section title="Klädsel">
+            <SubSection>
+              <Typography variant={'body1'}>
+                Ta på dig något som du känner dig fin i. Ta gärna inspiration
+                från de färger vi har valt för dagen.
+              </Typography>
+            </SubSection>
+            <SubSection>
+              <Typography variant={'body1'}>
+                Färgerna vi valt är följande:
+              </Typography>
+              <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <ColorCircle circleColor={muiColors.indigo[300]} />
+                <ColorCircle circleColor={muiColors.deepOrange[300]} />
+                <ColorCircle circleColor={muiColors.amber[500]} />
+              </div>
+            </SubSection>
+          </Section>
           <Section title={'Boende'}>
             <SubSection>
               <Typography variant={'body1'}>
                 Lista med förslag på boende för er som tänkt övernatta:
-                Camping/stugor (15 min från festen med bil): Tofta herrgård
-                (promenadavstånd): Strandhotellet, Marstrand (30 min med bil):
-                AirBnb (finns flera nära oss):
+                <ul>
+                  <li>
+                    <Link
+                      to={'https://www.skraddaron.se/'}
+                      style={{ color: muiColors.deepOrange[300] }}
+                    >
+                      Stugor (10 min med bil, lägre prisklass)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={
+                        'https://cafezanzibar.se/boka-boende-i-bohuslan-marsstrand/'
+                      }
+                      style={{ color: muiColors.deepOrange[300] }}
+                    >
+                      Zanzibar, Tjuvkil (15 min med bil, mellan prisklass)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to={'https://www.toftaherrgard.se/sv'}
+                      style={{ color: muiColors.deepOrange[300] }}
+                    >
+                      Tofta herrgård (promenadavstånd, dyrare prisklass)
+                    </Link>
+                  </li>
+                  <li>AirBnb (finns flera nära oss):</li>
+                  <li>
+                    <Link
+                      to={'https://marstrands.se/'}
+                      style={{ color: muiColors.deepOrange[300] }}
+                    >
+                      Strandhotellet, Marstrand (30 min med bil, dyrare
+                      prisklass)
+                    </Link>
+                  </li>
+                </ul>
               </Typography>
-            </SubSection>
-            <Typography variant={'body1'}>
-              Hör av er till oss för billigare alternativ!
-            </Typography>
-          </Section>
-          <Section title={'Ladda upp bilder och filmer'}>
-            <SubSection>
               <Typography variant={'body1'}>
-                Vi har tänkt att vi gärna vill att ni tar bilder och laddar upp
-                under kvällen. Vi vill försöka fixa en dropbox eller liknande
-                där ni kan ladda upp bilder ni tagit som ni tror vi skulle
-                uppskatta. Mer info om detta kommer.
+                {`Boende lite längre bort: `}
+                <ul>
+                  <li>
+                    <Link
+                      to={'https://www.hotellfarshatt.se/'}
+                      style={{ color: muiColors.deepOrange[300] }}
+                    >
+                      Hotell fars hatt, Kungälv
+                    </Link>
+                  </li>
+                </ul>
+              </Typography>
+              <Typography variant={'body1'}>
+                Hör av er till oss för billigare alternativ så hjälper vi till
+                att leta!
               </Typography>
             </SubSection>
           </Section>
@@ -241,7 +265,7 @@ export const Start = () => {
               <Typography variant={'body1'}>
                 <Link
                   to={'mailto:alexandra_reuter@hotmail.com'}
-                  style={{ color: muiColors.deepOrange[500] }}
+                  style={{ color: muiColors.deepOrange[300] }}
                 >
                   alexandra_reuter@hotmail.com{' '}
                 </Link>
@@ -255,10 +279,17 @@ export const Start = () => {
             </SubSection>
             <SubSection>
               <Typography variant={'body1'}>
-                Kontakta Matilda om du har frågor kring boende, transport, mat
-                eller annan logistik.
+                Kontakta Matilda om du vill hjälpa till inför festen eller har
+                frågor kring boende, transport, mat eller annan logistik.
               </Typography>
-              <Typography variant={'body1'}>073-342 14 56</Typography>
+              <Typography variant={'body1'}>
+                <Link
+                  to={'tel:073-342 14 56'}
+                  style={{ color: muiColors.deepOrange[300] }}
+                >
+                  073-342 14 56
+                </Link>
+              </Typography>
             </SubSection>
           </Section>
         </PagePaper>

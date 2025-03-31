@@ -6,3 +6,8 @@
   max-width: 900px;
   width: 100%;
 }
+
+::selection {
+  background-color: #7986cb;
+  color: white;
+}

@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@mui/material';
 import { FormWrapper } from './ApplicationForm.styled';
-import { useEffect, useState } from 'react';
+import { SyntheticEvent, useState } from 'react';
 import { useDb } from '../../hooks/useDb';
 import { useNavigate } from 'react-router-dom';
 import { PostType } from '../../types/postType';
@@ -24,7 +24,6 @@ export const ApplicationForm = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [sleepOver, setSleepOver] = useState<boolean>(false);
 
   const [formState, setFormState] = useState<PostType>({
     firstName: '',
@@ -36,7 +35,7 @@ export const ApplicationForm = () => {
     foodPreferences: null,
     nameList: null,
     numberOfCars: null,
-    numberOfBeds: null,
+    needAccommodationHelp: false,
     message: null,
   });
 
@@ -54,6 +53,18 @@ export const ApplicationForm = () => {
     if (fieldName === 'travelOption') {
       setTravelOption(value as TravelOption);
     }
+  };
+
+  const handleSwitchChange = (
+    event: SyntheticEvent<Element, Event>,
+    fieldName: string
+  ) => {
+    const value = (event.target as HTMLInputElement).checked;
+    console.log(fieldName, value);
+    setFormState((prevState) => ({
+      ...prevState,
+      [fieldName]: value,
+    }));
   };
 
   const handleSubmit = () => {
@@ -80,7 +91,6 @@ export const ApplicationForm = () => {
       childGuests,
       travelOption,
       numberOfCars,
-      numberOfBeds,
       nameList,
     } = formState;
 
@@ -90,35 +100,25 @@ export const ApplicationForm = () => {
       !!email &&
       adultGuests > 0 &&
       (adultGuests > 1 || childGuests > 0 ? nameList : true) &&
-      (travelOption !== 'car' || numberOfCars) &&
-      (sleepOver ? numberOfBeds : true);
+      (travelOption !== 'car' || numberOfCars);
 
     return Boolean(isValid);
   };
-
-  useEffect(() => {
-    if (!sleepOver) {
-      setFormState((prevState) => ({
-        ...prevState,
-        numberOfBeds: 0,
-      }));
-    }
-  }, [sleepOver]);
 
   return (
     <>
       <FormWrapper>
         <Typography variant="h4" fontFamily={'Charm'} color="primary">
-          Gästanmälan
+          Festanmälan
         </Typography>
         <Typography variant="body1">
           {
-            'Fyll i formuläret nedan för att anmäla dig till bröllopet. Anmäl dig senast 18 maj, 2025.'
+            'Fyll i formuläret nedan för att anmäla dig/er till festen. Anmäl dig senast 18 maj.'
           }
         </Typography>
         <Typography variant="body1">
           {
-            'O.B.S. Om du kommer med partner/barn behöver du bara fylla i en anmälan och skriva i antal vuxna & barn (under 12 år). Skriv gärna alla gästers namn i meddelandet på slutet.'
+            'Obs, anmälan görs per sällskap. Fyll i antal vuxna & barn (under 12 år). Skriv gärna alla gästers namn i meddelandet på slutet.'
           }
         </Typography>
         <div style={{ display: 'flex', flexDirection: 'row', gap: '16px' }}>
@@ -154,7 +154,7 @@ export const ApplicationForm = () => {
           fullWidth
           variant="filled"
           size={'small'}
-          helperText="Du själv plus eventuell partner och barn 12 år eller äldre."
+          helperText="Du själv plus eventuell partner och/eller barn 12 år eller äldre."
           onChange={(event) => handleTextFieldChange(event, 'adultGuests')}
           required
         />
@@ -164,7 +164,7 @@ export const ApplicationForm = () => {
           fullWidth
           variant="filled"
           size={'small'}
-          helperText="Antal barn under 12 år, äldre barn räknar vi som vuxna"
+          helperText="Antal barn (under 12 år)"
           onChange={(event) => handleTextFieldChange(event, 'childGuests')}
         />
         {formState.adultGuests > 1 ||
@@ -207,7 +207,7 @@ export const ApplicationForm = () => {
               fullWidth
               variant="filled"
               size={'small'}
-              helperText="Antal bilar ni kommer att åka med. O.B.S. Vi har begränsat antal parkeringsplatser."
+              helperText="Antal bilar ni kommer att åka med."
               onChange={(event) => handleTextFieldChange(event, 'numberOfCars')}
               required
             />
@@ -215,30 +215,18 @@ export const ApplicationForm = () => {
         )}
         <FormControlLabel
           control={<Switch />}
-          label="Vill sova över"
-          checked={sleepOver}
-          onChange={(_, checked) => setSleepOver(checked)}
+          label="Behöver hjälp med boende"
+          checked={formState.needAccommodationHelp}
+          onChange={(event) =>
+            handleSwitchChange(event, 'needAccommodationHelp')
+          }
         />
-        {sleepOver && (
-          <div style={{ padding: '16px', marginLeft: '16px' }}>
-            <TextField
-              type="number"
-              label="Antal sängar"
-              fullWidth
-              variant="filled"
-              size={'small'}
-              helperText="Antal sängar ni behöver. O.B.S. Vi har begränsat antal sovplatser."
-              onChange={(event) => handleTextFieldChange(event, 'numberOfBeds')}
-              required
-            />
-          </div>
-        )}
         <TextField
           label="Matpreferens / Allergi"
           fullWidth
           variant="filled"
           size={'small'}
-          helperText="t.ex. vegetarisk, vegansk, glutenfri, laktosfri, nötallergi etc."
+          helperText="T.ex. vegetarisk, vegansk, glutenfri, laktosfri, nötallergi etc."
           onChange={(event) => handleTextFieldChange(event, 'foodPreferences')}
         />
         <TextField
@@ -264,7 +252,7 @@ export const ApplicationForm = () => {
       <Snackbar
         open={snackbarOpen}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-        autoHideDuration={6000}
+        autoHideDuration={10000}
         onClose={() => setSnackbarOpen(false)}
       >
         {isFormValid ? undefined : (

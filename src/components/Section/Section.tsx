@@ -10,12 +10,12 @@ const SectionWrapper = styled.section`
 const SubSectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   margin: 16px 0;
 `;
 
 const SectionDivider = styled.div`
-  border-bottom: 3px dotted ${colors.blue[500]};
+  border-bottom: 3px dotted ${colors.amber[500]};
   margin: 16px 0;
 `;
 

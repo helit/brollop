@@ -13,5 +13,5 @@ export const PagePaper = styled(Card)`
   gap: 32px;
   background-color: rgba(246, 238, 227, 0.9);
   color: #242424;
-  padding: 16px;
+  padding: 26px;
 `;

@@ -20,6 +20,14 @@ export const useDb = () => {
     setPostCount(data.length)
   }
 
+  const deletePost = async (id: number) => {
+    const { error } = await dbClient.from('posts').delete().eq('id', id)
+
+    if (error) {
+      throw error
+    }
+  }
+
   const createPost = async (data: PostType) => {
     const { error } = await dbClient.from('posts').insert({
       first_name: data.firstName,
@@ -31,7 +39,8 @@ export const useDb = () => {
       message: data.message || null,
       travel_option: data.travelOption || null,
       number_of_cars: data.numberOfCars || null,
-      number_of_beds: data.numberOfBeds || null,
+      need_accommodation_help: data.needAccommodationHelp || null,
+      name_list: data.nameList || null,
     })
 
     if (error) {
@@ -39,5 +48,5 @@ export const useDb = () => {
     }
   }
 
-  return { getPosts, createPost, postCount }
+  return { getPosts, createPost, deletePost, postCount }
 }

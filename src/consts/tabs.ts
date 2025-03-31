@@ -11,7 +11,7 @@ export const tabs: TabValue[] = [
     index: 0,
   },
   {
-    label: 'Anmälan',
+    label: 'Festanmälan',
     value: 'anmalan',
     index: 1
   },

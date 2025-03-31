@@ -13,22 +13,14 @@ export const WelcomeOuterWrapper = styled.div`
 `;
 
 export const WelcomeInnerWrapper = styled.div`
-    max-width: 500px;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
-    gap: 48px;
-`;
-
-export const WelcomeDivider = styled.div`
-    background-color: ${muiColors.amber[600]};
-    width: 100%;
-    height: 3px;
-    box-shadow: ${muiColors.grey[800]} 2px 3px 1px;
-    border-radius: 30%;
+    gap: 24px;
 `;
 
 export const WelcomeTitle = styled(Typography)`
-    text-shadow: ${muiColors.grey[800]} 2px 3px 1px;
+    text-shadow: ${muiColors.grey[800]} 1px 1px 1px;
 
     @media (max-width: ${breakpoints.tablet}px) {
         font-size: 3rem;
@@ -36,7 +28,7 @@ export const WelcomeTitle = styled(Typography)`
 `;
 
 export const WelcomeBody = styled(Typography)`
-    text-shadow: ${muiColors.grey[800]} 2px 2px 1px;
+    text-shadow: ${muiColors.grey[800]} 1px 1px 1px;
     
 
     @media (max-width: ${breakpoints.tablet}px) {

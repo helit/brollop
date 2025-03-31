@@ -8,6 +8,6 @@ export type PostType = {
   nameList: string | null
   foodPreferences: string | null
   numberOfCars: number | null
-  numberOfBeds: number | null 
+  needAccommodationHelp: boolean 
   message: string | null
 }
