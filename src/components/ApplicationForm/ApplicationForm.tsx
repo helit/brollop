@@ -217,7 +217,7 @@ export const ApplicationForm = () => {
           control={<Switch />}
           label="Vill sova över"
           checked={sleepOver}
-          onChange={(event, checked) => setSleepOver(checked)}
+          onChange={(_, checked) => setSleepOver(checked)}
         />
         {sleepOver && (
           <div style={{ padding: '16px', marginLeft: '16px' }}>
