@@ -108,7 +108,7 @@ export const ApplicationForm = () => {
   return (
     <>
       <FormWrapper>
-        <Typography variant="h4" fontFamily={'Charm'}>
+        <Typography variant="h4" fontFamily={'Charm'} color="primary">
           Gästanmälan
         </Typography>
         <Typography variant="body1">

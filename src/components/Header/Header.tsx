@@ -1,16 +1,16 @@
-import { Box, Tab, Tabs, Typography } from '@mui/material'
-import { ContentWrapper, StyledAppBar } from './Header.styled'
-import { useTabs } from '../../hooks/useTabs'
-import { tabs } from '../../consts/tabs'
+import { Box, Tab, Tabs, Typography } from '@mui/material';
+import { ContentWrapper, StyledAppBar } from './Header.styled';
+import { useTabs } from '../../hooks/useTabs';
+import { tabs } from '../../consts/tabs';
 export const Header = () => {
-  const { activeTab, setActiveTab } = useTabs()
+  const { activeTab, setActiveTab } = useTabs();
 
   return (
     <StyledAppBar>
       <ContentWrapper>
-        <Typography fontFamily={'Charm'} variant="h6">
+        {/* <Typography fontFamily={'Charm'} variant="h6">
           {'Henke & Lottens bröllop'}
-        </Typography>
+        </Typography> */}
         <Box>
           <Tabs value={activeTab}>
             {tabs.map((tab) => (
@@ -24,5 +24,5 @@ export const Header = () => {
         </Box>
       </ContentWrapper>
     </StyledAppBar>
-  )
-}
+  );
+};

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { colors } from "../../consts/colors";
+import { colors as muiColors } from "@mui/material";
 import { Typography } from "@mui/material";
 import { breakpoints } from "../../consts/breakpoints";
 
@@ -8,26 +8,27 @@ export const WelcomeOuterWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 80px);
+    // height: calc(100vh - 80px);
+    height: 100vh;
 `;
 
 export const WelcomeInnerWrapper = styled.div`
-    max-width: 510px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     gap: 48px;
 `;
 
 export const WelcomeDivider = styled.div`
-    background-color: white;
+    background-color: ${muiColors.amber[600]};
     width: 100%;
     height: 3px;
-    box-shadow: ${colors.black} 1px 0px 10px;
+    box-shadow: ${muiColors.grey[800]} 2px 3px 1px;
     border-radius: 30%;
 `;
 
 export const WelcomeTitle = styled(Typography)`
-    text-shadow: ${colors.black} 1px 0px 10px;
+    text-shadow: ${muiColors.grey[800]} 2px 3px 1px;
 
     @media (max-width: ${breakpoints.tablet}px) {
         font-size: 3rem;
@@ -35,8 +36,7 @@ export const WelcomeTitle = styled(Typography)`
 `;
 
 export const WelcomeBody = styled(Typography)`
-    // text-shadow: ${colors.black} 1px 0px 10px;
-    text-shadow: ${colors.black} 2px 2px 1px;
+    text-shadow: ${muiColors.grey[800]} 2px 2px 1px;
     
 
     @media (max-width: ${breakpoints.tablet}px) {

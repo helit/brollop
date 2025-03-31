@@ -1,15 +1,21 @@
 import styled from '@emotion/styled';
-import { Typography } from '@mui/material';
+import { colors, Typography } from '@mui/material';
 import { ReactNode } from 'react';
 
 const SectionWrapper = styled.section`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+`;
+
+const SubSectionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 16px 0;
 `;
 
 const SectionDivider = styled.div`
-  border-bottom: 3px dotted #000;
+  border-bottom: 3px dotted ${colors.blue[500]};
   margin: 16px 0;
 `;
 
@@ -24,7 +30,7 @@ export const Section = ({ children, title, sectionId }: SectionProps) => {
     <>
       <SectionWrapper id={sectionId}>
         {title && (
-          <Typography variant="h4" fontFamily={'Charm'}>
+          <Typography variant="h4" fontFamily={'Charm'} color="primary">
             {title}
           </Typography>
         )}
@@ -33,4 +39,8 @@ export const Section = ({ children, title, sectionId }: SectionProps) => {
       <SectionDivider />
     </>
   );
+};
+
+export const SubSection = ({ children }: { children: ReactNode }) => {
+  return <SubSectionWrapper>{children}</SubSectionWrapper>;
 };

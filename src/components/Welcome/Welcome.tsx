@@ -13,7 +13,7 @@ export const Welcome = () => {
     <WelcomeOuterWrapper>
       <WelcomeInnerWrapper>
         <div>
-          <WelcomeTitle fontFamily={'Charm'} variant="h2">
+          <WelcomeTitle fontFamily={'Charm'} variant="h2" color="secondary">
             {'Henke & Lottens bröllop'}
           </WelcomeTitle>
           <WelcomeDivider />
@@ -33,7 +33,7 @@ export const Welcome = () => {
           </WelcomeBody>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <IconButton color="primary" size="large">
+          <IconButton color="secondary" size="large">
             <SouthIcon fontSize="inherit" />
           </IconButton>
         </div>
