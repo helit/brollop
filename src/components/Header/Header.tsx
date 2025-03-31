@@ -8,10 +8,13 @@ export const Header = () => {
   return (
     <StyledAppBar>
       <ContentWrapper>
-        {/* <Typography fontFamily={'Charm'} variant="h6">
-          {'Henke & Lottens bröllop'}
-        </Typography> */}
-        <Box>
+        <Box
+          style={{
+            display: 'flex',
+            maxWidth: '900px',
+            width: '100%',
+          }}
+        >
           <Tabs value={activeTab}>
             {tabs.map((tab) => (
               <Tab

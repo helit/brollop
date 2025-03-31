@@ -10,7 +10,7 @@ export const StyledAppBar = styled(AppBar)`
 
 export const ContentWrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   align-items: center;
   gap: 24px;
