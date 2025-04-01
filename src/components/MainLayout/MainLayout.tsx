@@ -11,10 +11,11 @@ interface MainLayoutProps {
 
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
-    <Background>
+    <div>
+      <Background src={'./assets/background-3.jpg'} />
       <MainLayoutOuterWrapper>
         <MainLayoutWrapper>{children}</MainLayoutWrapper>
       </MainLayoutOuterWrapper>
-    </Background>
+    </div>
   );
 };

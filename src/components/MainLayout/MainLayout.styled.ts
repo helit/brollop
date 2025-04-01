@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 import { breakpoints } from "../../consts/breakpoints";
 
-export const Background = styled.div`
-    background-image: url('./assets/background-3.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+export const Background = styled.img`
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 `;
 
 export const MainLayoutOuterWrapper = styled.div`
