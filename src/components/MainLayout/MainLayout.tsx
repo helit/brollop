@@ -1,5 +1,9 @@
 import { ReactNode } from 'react';
-import { Background, MainLayoutWrapper } from './MainLayout.styled';
+import {
+  Background,
+  MainLayoutOuterWrapper,
+  MainLayoutWrapper,
+} from './MainLayout.styled';
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -8,7 +12,9 @@ interface MainLayoutProps {
 export const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <Background>
-      <MainLayoutWrapper>{children}</MainLayoutWrapper>
+      <MainLayoutOuterWrapper>
+        <MainLayoutWrapper>{children}</MainLayoutWrapper>
+      </MainLayoutOuterWrapper>
     </Background>
   );
 };

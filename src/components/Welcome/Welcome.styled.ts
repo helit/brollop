@@ -16,9 +16,9 @@ export const WelcomeOuterWrapper = styled.div`
 `;
 
 export const WelcomeInnerWrapper = styled.div`
-    max-width: 600px;
     display: flex;
     flex-direction: column;
+    max-width: 600px;
     gap: 24px;
 `;
 
