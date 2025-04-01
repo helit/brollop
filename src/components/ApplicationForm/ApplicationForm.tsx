@@ -60,10 +60,9 @@ export const ApplicationForm = () => {
     fieldName: string
   ) => {
     const value = (event.target as HTMLInputElement).checked;
-    console.log(fieldName, value);
     setFormState((prevState) => ({
       ...prevState,
-      [fieldName]: value,
+      [fieldName]: !!value,
     }));
   };
 
@@ -216,7 +215,7 @@ export const ApplicationForm = () => {
         <FormControlLabel
           control={<Switch />}
           label="Behöver hjälp med boende"
-          checked={formState.needAccommodationHelp}
+          checked={!!formState.needAccommodationHelp}
           onChange={(event) =>
             handleSwitchChange(event, 'needAccommodationHelp')
           }

@@ -39,7 +39,7 @@ export const useDb = () => {
       message: data.message || null,
       travel_option: data.travelOption || null,
       number_of_cars: data.numberOfCars || null,
-      need_accommodation_help: data.needAccommodationHelp || null,
+      need_accommodation_help: data.needAccommodationHelp,
       name_list: data.nameList || null,
     })
 

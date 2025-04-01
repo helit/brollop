@@ -1,9 +1,7 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 
 export const NotFound = () => {
-  const location = useLocation()
-
-  console.log(location.pathname)
+  const location = useLocation();
 
   return (
     <div>
@@ -12,5 +10,5 @@ export const NotFound = () => {
         No match for <code>{location.pathname}</code>
       </p>
     </div>
-  )
-}
+  );
+};
