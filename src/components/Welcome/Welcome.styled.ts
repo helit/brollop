@@ -8,8 +8,11 @@ export const WelcomeOuterWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // height: calc(100vh - 80px);
     height: 100vh;
+
+    @media (max-width: ${breakpoints.tablet}px) {
+        justify-content: unset;
+    }
 `;
 
 export const WelcomeInnerWrapper = styled.div`
@@ -23,7 +26,7 @@ export const WelcomeTitle = styled(Typography)`
     text-shadow: ${muiColors.grey[800]} 1px 1px 1px;
 
     @media (max-width: ${breakpoints.tablet}px) {
-        font-size: 3rem;
+        font-size: 2.3rem;
     }
 `;
 

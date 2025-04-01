@@ -3,6 +3,7 @@ import './App.css';
 import { Header } from './components/Header/Header';
 import { TabsProvider } from './contexts/TabsContext';
 import { createTheme, ThemeProvider } from '@mui/material';
+import { MainLayout } from './components/MainLayout/MainLayout';
 
 const theme = createTheme({
   palette: {
@@ -24,7 +25,9 @@ export const App = () => {
       <ThemeProvider theme={theme}>
         <TabsProvider>
           <Header />
-          <Outlet />
+          <MainLayout>
+            <Outlet />
+          </MainLayout>
         </TabsProvider>
       </ThemeProvider>
     </>

@@ -7,7 +7,6 @@
 
   color-scheme: light dark;
   color: #f6eee3;
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,17 +15,18 @@
 }
 
 body {
-  display: flex;
+  margin: 0;
+  padding: 80px 0 0;
+  /* height: calc(100vh - 80px); */
+  /* display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 80px 0 0;
   box-sizing: border-box;
   min-width: 320px;
-  margin: 0;
   min-height: calc(100vh - 80px);
   background: url('/assets/background-3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
