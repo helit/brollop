@@ -284,10 +284,10 @@ export const Start = () => {
               </Typography>
               <Typography variant={'body1'}>
                 <Link
-                  to={'tel:073-342 14 56'}
+                  to={'mailto:matilda@lofving.se'}
                   style={{ color: muiColors.deepOrange[300] }}
                 >
-                  073-342 14 56
+                  matilda@lofving.se
                 </Link>
               </Typography>
             </SubSection>
