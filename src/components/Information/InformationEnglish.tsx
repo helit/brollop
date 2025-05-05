@@ -238,7 +238,7 @@ export const InformationEnglish = () => {
           </Typography>
         </SubSection>
       </Section>
-      <Section title={'Kontaktpersoner'}>
+      <Section title={'Contacts'}>
         <SubSection>
           <Typography variant={'h5'}>Toastmasters</Typography>
           <Typography variant={'body1'}>
