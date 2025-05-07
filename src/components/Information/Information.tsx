@@ -158,6 +158,15 @@ export const Information = () => {
           </Typography>
         </SubSection>
       </Section>
+      <Section title={'Bröllopspresent'}>
+        <SubSection>
+          <Typography variant={'body1'}>
+            Vi önskar oss inga prylar (det har vi tillräckligt av :D). Om ni
+            vill ge oss en bröllopspresent så önskar vi oss ett bidrag till vår
+            bröllopkassa samt bygget av vår övervåning.
+          </Typography>
+        </SubSection>
+      </Section>
       <Section title="Klädsel">
         <SubSection>
           <Typography variant={'body1'}>

@@ -80,26 +80,26 @@ export const InformationEnglish = () => {
         </SubSection>
         <SubSection>
           <Typography variant={'body1'}>
-            The party will take place at home in our garden in Tofta. We will go
-            there together after the ceremony. We wish a child-friendly wedding
-            where everyone can participate and have fun together. We ask you to
-            keep this in in mind during the party.
+            The party will take place in our garden in Tofta. We will go there
+            together after the wedding ceremony. We wish a child-friendly
+            wedding where everyone can participate and have fun together. We ask
+            you to keep this in in mind during the party.
           </Typography>
         </SubSection>
         <SubSection>
           <Typography variant={'body1'}>
-            We would love to have a fun-filled day where your guests contribute
-            to an unforgettable day! It is welcome to contribute with speeches,
-            speeches, games or anything else - please contact the toastmaster.
-            Contact details can be found at the bottom of the page.
+            We would love to have a fun party where your guests contribute to an
+            unforgettable day! You are more than welcome to contribute with
+            speeches, spectacles, games or anything else - please contact the
+            toastmaster. Contact details can be found at the bottom of the page.
           </Typography>
         </SubSection>
         <SubSection>
           <Typography variant={'body1'}>
             We are especially happy for those who are willing to help with
             practical tasks before, during or after the party. If you would like
-            to do do so, please contact our directors. Contact details can be
-            found at the bottom of the page.
+            to do so, please contact our directors. Contact details can be found
+            at the bottom of the page.
           </Typography>
         </SubSection>
         <SubSection>
@@ -118,10 +118,10 @@ export const InformationEnglish = () => {
         <Typography variant={'h6'}>Parking</Typography>
         <SubSection>
           <Typography variant={'body1'}>
-            <strong>Main parking lot:</strong> As parking spaces are limited in
-            the close to the house, we ask you with quick legs to park at Stall
-            Tofta at Tofta Manor and walk 20 minutes (1.5km) home to us. If
-            necessary, we can arrange pick-up at the stable / shuttle home to
+            <strong>Main parking lot:</strong> As parking spaces are limited
+            close to our the house, we ask our guest with quick legs to park at
+            Tofta Stables at Tofta Manor and walk 20 minutes (1.5km) home to us.
+            If necessary, we can arrange pick-up at the stable / shuttle home to
             us.
           </Typography>
           <Typography variant={'body1'}>
@@ -153,8 +153,17 @@ export const InformationEnglish = () => {
           <Typography variant={'body1'}>
             We will be doing a naming ceremony for Lovis during the party, so be
             prepared for this! Lovis would like toys or nice personalized things
-            to remember her naming with. Presents can more than happy be better
+            to remember her naming. Presents can more than happy be better
             second hand or handmade!
+          </Typography>
+        </SubSection>
+      </Section>
+      <Section title={'Wedding gifts'}>
+        <SubSection>
+          <Typography variant={'body1'}>
+            We don't want any stuff (we have enough of that :D). If you want to
+            give us a wedding gift, we would like a contribution to our wedding
+            fund and the construction of our second floor in our house.
           </Typography>
         </SubSection>
       </Section>
@@ -208,7 +217,7 @@ export const InformationEnglish = () => {
                   Tofta Manor (walking distance, more expensive price range)
                 </Link>
               </li>
-              <li>AirBnb (there are several near us):</li>
+              <li>AirBnb (there are several nearby):</li>
               <li>
                 <Link
                   to={'https://marstrands.se/'}
@@ -234,7 +243,8 @@ export const InformationEnglish = () => {
             </ul>
           </Typography>
           <Typography variant={'body1'}>
-            Contact us for cheaper alternatives and we will help you search!
+            Contact us for cheaper alternatives and we will help you with the
+            search!
           </Typography>
         </SubSection>
       </Section>
