@@ -164,6 +164,12 @@ export const InformationEnglish = () => {
             We don't want any stuff (we have enough of that :D). If you want to
             give us a wedding gift, we would like a contribution to our wedding
             fund and the construction of our second floor in our house.
+            We don't want any stuff. If you
+            want to give us a wedding gift, we would like a contribution to our
+            wedding fund, the construction of our second floor or a fun shrub / fruit tree to plant in the garden.
+          </Typography>
+          <Typography variant={'body1'}>
+            Not sure how to send money internationally, but here is our shared bank account at Länsförsäkringar bank: 9060-66 753 29.
           </Typography>
         </SubSection>
       </Section>
