@@ -161,12 +161,14 @@ export const Information = () => {
       <Section title={'Bröllopspresent'}>
         <SubSection>
           <Typography variant={'body1'}>
-            Vi önskar oss inga prylar (det har vi tillräckligt av). Om ni
-            vill ge oss en bröllopspresent så önskar vi oss ett bidrag till vår
-            bröllopkassa, bygget av vår övervåning eller en rolig buske/fruktträd att planera i trädgården.
+            Vi önskar oss inga prylar. Om ni vill ge oss en bröllopspresent så
+            önskar vi oss ett bidrag till vår bröllopkassa, bygget av vår
+            övervåning eller en rolig buske/fruktträd att planera i trädgården.
           </Typography>
-          <Typography variant={'body'}>
-            Det går t ex bra att swisha till 0706789198 (Henrik) eller 0766526175 (Lotten) eller sätta in på vårat konto 9060-66 753 29 (Länsförsäkringar).
+          <Typography variant={'body1'}>
+            Det går t ex bra att swisha till 0706789198 (Henrik) eller
+            0766526175 (Lotten) eller sätta in på vårat konto 9060-66 753 29
+            (Länsförsäkringar).
           </Typography>
         </SubSection>
       </Section>
