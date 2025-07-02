@@ -21,18 +21,14 @@ export const WelcomeEnglish = () => {
         </div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           <WelcomeBody variant="h6">
-            We're getting married this summer and Lovis is getting her name!
+            We're getting married and Lovis is officially getting her name!
           </WelcomeBody>
           <WelcomeBody variant="h6">
             Instead of a letter invitation, we have built a website where you
             can find more information.
           </WelcomeBody>
           <WelcomeBody variant="h6">
-            We hope you will celebrate the day with us!
-          </WelcomeBody>
-          <WelcomeBody variant="h6">
-            Please RSVP as soon as possible, but no later than May 18 by filling
-            in the party registration form.
+            We are happy that you are celebrating this day with us!
           </WelcomeBody>
         </div>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
